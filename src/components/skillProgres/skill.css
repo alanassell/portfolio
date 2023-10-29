@@ -1,0 +1,82 @@
+.social-container {
+    position: relative;
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    perspective: 300px;
+    font-size: 24px;
+    margin: 8px;
+  }
+
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke: #679A8E;
+  }
+
+  .CircularProgressbar .CircularProgressbar-text {
+    fill: #679A8E;;
+  }
+
+  .social-container .social-cube {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.333s;
+    transform: translateZ(-18px);
+  }
+
+  .social-container .social-cube .front, .social-container .social-cube .bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .social-container .social-cube .front {
+    transform: rotateX(0deg) translateZ(18px);
+    visibility: visible;
+  }
+
+  .social-container .social-cube .front img{
+    height: 5rem;
+  }
+
+  .social-container .social-cube .front img svg{
+    width: 5rem;
+  }
+
+  .social-container .social-cube .bottom {
+    transform: rotateX(-90deg) translateZ(18px);
+    visibility: hidden;
+}
+
+.social-container.active .social-cube {
+  transform: translateZ(-18px) rotateX(90deg);
+}
+
+.social-container.active .social-cube .front{
+    visibility: hidden
+}
+
+.social-container:hover .social-cube .front{
+    visibility: hidden
+}
+
+.social-container.active .social-cube .bottom{
+    visibility: visible;
+}
+
+.social-container:hover .social-cube {
+    transform: translateZ(-18px) rotateX(90deg);
+}
+
+.social-container:hover .social-cube .bottom{
+    visibility: visible;
+}

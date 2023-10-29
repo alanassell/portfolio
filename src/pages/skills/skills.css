@@ -1,0 +1,60 @@
+.containerSkills{
+    width: 80%;
+    height: 100vh;
+    margin: 0% 10% 0% 10%;
+    padding-top: 8rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.containerSkills .containerSkillsProgram{
+    width: 50%;
+    height: 100%;
+}
+
+.containerSkills .conteinerTecnologias{
+    width: 100%;
+    height: 60%;
+    margin: 20% 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.containerSkills .conteinerTecnologias div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSkills .containerSkillsDiseño{
+    width: 50%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .containerSkills{
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .containerSkills .containerSkillsProgram{
+        width: 100%;
+        height: 50%;
+        margin: 0;
+    }
+    
+    .containerSkills .conteinerTecnologias{
+        width: 100%;
+        height: 50%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .containerSkills .containerSkillsDiseño{
+        width: 100%;
+        height: 50%;
+    }
+}

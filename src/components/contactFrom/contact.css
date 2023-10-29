@@ -1,0 +1,225 @@
+.formContact{
+    width: 80%;
+    margin: 0% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{ 
+    border: none;
+    margin: 1rem;
+    width: 100%;
+    height: 50px;
+    text-align: start;
+    font-size: 1.5rem;
+    background-color: #D9D9D9;
+    border-radius: 1rem;
+    color: black;
+    font-weight: bold;
+    padding: 2% 5%;
+}
+
+.formContact div{
+    width: 100%;
+    margin: 1rem;
+    position: relative;
+}
+
+.message{
+    margin: 0;
+    width: 85%; 
+    height: 100px;
+    text-align: start;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: #D9D9D9;
+    border-radius: 1rem;
+    color: black;
+    font-weight: bold;
+    padding: 5% 5%;
+}
+
+
+.submitButton {
+    --color: #ffffff;
+    --background: #000000;
+    --height: 30px;
+    --width: 160px;
+    --icon: #fff;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    outline: none;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+    width: var(--width);
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color);
+    line-height: var(--height);
+  }
+
+  .submitButton:before, .submitButton:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .submitButton:before {
+    transform: translate(-50%, -50%);
+    height: var(--before-h, var(--height));
+    border-radius: var(--before-r, 7px);
+    background: var(--background);
+    transform-origin: 50% 50%;
+    transition: width 0.3s, height 0.3s, border-radius 0.2s;
+    transition-delay: 0.2s;
+  }
+  .submitButton:after {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin: -8px 0 0 -8px;
+    background: var(--icon);
+    z-index: 2;
+    border-radius: 50%;
+    transform: scale(0);
+  }
+  .submitButton span {
+    margin: 0 1rem;
+    border: 2px solid white;
+    border-radius: 2.5rem;
+    z-index: 1;
+    padding: 1rem;
+    display: block;
+    position: relative;
+    opacity: var(--span-o, 1);
+    transform: scale(var(--span-s, 1));
+    transition: opacity 0.3s, transform 0.2s;
+    transition-delay: 0.2s;
+  }
+  .submitButton svg {
+    width: 2rem;
+    height: 3rem;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    stroke: var(--icon);
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    transform: translate(-50%, -50%);
+    stroke-dasharray: 17px;
+    stroke-dashoffset: var(--svg-o, 17px);
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  .submitButton.processing {
+    --before-w: 41px;
+    --before-h: 41px;
+    --before-r: 22px;
+    --span-o: 0;
+    --span-s: .6;
+    --after-s: 1;
+    --svg-o: 34px;
+  }
+  .submitButton.processing:before {
+    -webkit-animation: pulse 3s linear forwards;
+            animation: pulse 3s linear forwards;
+
+  }
+  .submitButton.processing:after {
+    -webkit-animation: dot 3s linear forwards;
+            animation: dot 3s linear forwards;
+            visibility: hidden;
+  }
+  .submitButton.processing svg {
+    transition-delay: 3s;
+  }
+  
+  @-webkit-keyframes pulse {
+    4% {
+      transform: translate(-50%, -50%) scaleX(1.1);
+    }
+    8% {
+      transform: translate(-50%, -50%);
+    }
+    24%, 56%, 88% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    40%, 72% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+  
+  @keyframes pulse {
+    4% {
+      transform: translate(-50%, -50%) scaleX(1.1);
+    }
+    8% {
+      transform: translate(-50%, -50%);
+    }
+    24%, 56%, 88% {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    40%, 72% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+  @-webkit-keyframes dot {
+    8% {
+        visibility: visible;
+      transform: scale(0);
+    }
+    16% {
+      transform: scale(1) rotate(30deg) translateX(48px);
+    }
+    95% {
+      transform: scale(1) rotate(1000deg) translateX(48px);
+    }
+    99% {
+        transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
+    }
+    100%{
+        visibility: hidden;
+    }
+  }
+  @keyframes dot {
+    8% {
+        visibility: visible;
+      transform: scale(0);
+    }
+    16% {
+      transform: scale(1) rotate(30deg) translateX(48px);
+    }
+    95% {
+      transform: scale(1) rotate(1000deg) translateX(48px);
+    }
+    99% {
+        transform: scale(0.125) rotate(1050deg) translate(52px, -6px);
+    }
+    100%{
+        visibility: hidden;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .formContact{
+      width: 100%;
+      margin: 0;
+    }
+
+    .submitButton span {
+      padding: 0;
+    }
+
+    .message{
+      width: 100%;
+    }
+
+  }

@@ -1,0 +1,97 @@
+.sectionNav{
+    padding-top: 2rem;
+    width: 100%;
+    height: 6rem;
+    padding: 0% 10% 0% 10%;
+    position: fixed;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    z-index: 99;
+}
+
+.burgerBtn{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    margin-right: 10%;
+    padding-top: 1rem;
+    visibility: collapse;
+}
+
+nav a:active,
+nav a:focus,
+nav a:hover {
+    color: #679A8E;
+}
+
+.navLogo{
+    width: 50%;
+}
+
+.navLogo svg{
+    width: 6rem;
+    height: 6rem;
+}
+
+.navLogo svg:hover path{
+    fill: #679A8E;
+}
+
+.conteinerNav{
+    width: 50%;
+    text-align: end;
+}
+
+.off{
+    display: none;
+}
+
+.navBurger {
+    position: fixed;
+    right: 0;
+    width: 60%;
+    height: 50vh;
+    min-height: 350px;
+    background-color: rgb(0, 0, 0);
+    z-index: 99;
+}
+
+
+.navBurger nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    margin: 20%;
+}
+
+.navBurger .leftBot{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navBurger .rightTop{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .sectionNav{
+        padding: 2rem 10% 0% 10%;
+        margin: 0%;
+    }
+    
+    .conteinerNav{
+       display: none;
+    }
+
+    .burgerBtn{
+        visibility: visible;
+    }
+    
+}
