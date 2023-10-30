@@ -57,15 +57,7 @@ function Proyects() {
         nombre: 'Panel de administrcion jugdores',
         descripcion1: 'Proyecto Full Stack. Panel de administración dedicada a la gestión de usurios.',
         descripcion2: `
-        Este proyecto es un panel de administración desarrollado para una empresa privada dedicada a la gestión de usuarios de un juego. Permite a los trabajadores acceder a través de un sistema de login con diferentes roles asignados para llevar a cabo tareas específicas. La aplicación utiliza tecnologías modernas como React.js para el front-end, Node.js y Express.js para el back-end, y se integra con una base de datos MongoDB utilizando Mongoose para la gestión de datos. Se implementa Bootstrap para el diseño y DataTables para la visualización de datos tabulares, ofreciendo una experiencia de usuario intuitiva y eficiente.
-
-        Características Destacadas:
-
-        Sistema de autenticación con diferentes roles para los trabajadores.
-        Visualización y gestión de datos de jugadores en tablas interactivas.
-        Integración con una base de datos MongoDB para un almacenamiento eficiente y escalable.
-        Diseño responsivo y atractivo utilizando Bootstrap.
-        Interfaz intuitiva y fácil de usar para la administración de jugadores.
+        Este proyecto es un panel de administración desarrollado para una empresa privada dedicada a la gestión de usuarios para un juego. Permite a los trabajadores acceder a través de un sistema de login con diferentes roles asignados para llevar a cabo tareas específicas. La aplicación utiliza tecnologías modernas como React.js para el front-end, Node.js y Express.js para el back-end, y se integra con una base de datos MongoDB utilizando Mongoose para la gestión de datos. Se implementa Bootstrap para el diseño y DataTables para la visualización de datos tabulares, ofreciendo una experiencia de usuario intuitiva y eficiente.
 
         `,
         tecnologias: ["React js","Node js","Express","Mongodb","Bootstrap","Data table"],

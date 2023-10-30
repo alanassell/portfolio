@@ -2,14 +2,16 @@
     background-color: black;
     width: 60% !important;
     height: 100vh;
+    max-height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
 }
 
 .offcanvas-body{
+    height: 80%;
     padding: 10rem;
-    padding-top: 15rem;
+    overflow-y: hidden;
 }
 
 .btnClose{
@@ -19,10 +21,10 @@
     cursor: pointer;
 }
 
-.btnLink{
-    position: absolute;
-    bottom: 15%;
-    right: 10%;
+.btnLink{ 
+    width: 100%;
+    display: flex;
+    justify-content: end;
     cursor: pointer;
 }
 
@@ -40,8 +42,7 @@
 }
 
 .containerImg{
-    width: 100%;
-    height: 50%;
+    width: 100%
 }
 
 .containerImg div{
@@ -54,9 +55,8 @@
 
 .containerImg div img{
     width: 100%;
+    max-width: 500px;
 }
-
-
 
 .containerInfo{
     padding-top: 5rem;
@@ -76,11 +76,14 @@
     }
     .offcanvas-body{
         padding: 5rem;
+        padding-top: 0rem;
+        height: 100%;
     }
 
     .containerImg{
         width: 100%;
-        height: 30%;
+        height: 50%;
+        max-width: 600px;
     }
 
     .containerImg div{
@@ -99,11 +102,15 @@
         width: 3rem;
     }
     
+    .containerInfo{
+        padding-top: 3rem;
+    }
+
 }
 
-@media (max-height: 650px) {
-    .btnLink{
-        bottom: 20%;
+@media (max-width: 370px) {
+    .containerInfo .tecnologias{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
-

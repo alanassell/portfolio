@@ -25,13 +25,6 @@ const ModalProyecto = ({proyecto}) => {
           </a>
 
 
-          {proyecto.link ?
-            <a href={proyecto.link} target='_blank' className='btnLink'>
-              <span className="material-symbols-outlined">
-                open_in_new
-              </span>
-            </a> 
-          : null}
           
 
           <div className='containerImg'>
@@ -47,6 +40,13 @@ const ModalProyecto = ({proyecto}) => {
                     return <span className='f10 tecnologais'>{tec}</span>            
                   })}
               </div>
+              {proyecto.link ?
+            <a href={proyecto.link} target='_blank' className='btnLink pt-2'>
+              <span className="material-symbols-outlined">
+                open_in_new
+              </span>
+            </a> 
+          : null}
           </div>
         </Offcanvas.Body>
       </Offcanvas>
